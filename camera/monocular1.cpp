@@ -52,7 +52,7 @@ int main(int argc, char **argv)
         // waitKey(100);
     }
 
-	Mat cameraMatrix, distCoeffs;//内参矩阵，畸变系数，旋转量，偏移量
+	Mat cameraMatrix, distCoeffs;//内参矩阵，畸变系数
     vector<Mat> R, t;//旋转量，偏移量
 	calibrateCamera(world_points, images_points, img_gray.size(), cameraMatrix, distCoeffs, R, t);
 

@@ -16,3 +16,5 @@ include_directories(${OpenCV_INCLUDE_DIRS} ${PCL_INCLUDE_DIRS})
 # cam_lidar calibration
 add_executable(calibration cam_lidar/calibration.cpp)
 target_link_libraries(calibration ${OpenCV_LIBS} ${PCL_LIBRARIES})
+# add_executable(test cam_lidar/test.cpp)
+# target_link_libraries(test ${OpenCV_LIBS} ${PCL_LIBRARIES})
