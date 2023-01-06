@@ -71,6 +71,13 @@ int main(int argc, char **argv)
     // 计算立体校正的参数
     Mat R1, R2, P1, P2, Q;
     stereoRectify(cameraMatrix_l, distCoeffs_l, cameraMatrix_r, distCoeffs_r, img_l.size(), R, t, R1, R2, P1, P2, Q);
+    // 三种计算基线的方法
+    double base_line = -P2.at<double>(0, 3) / P2.at<double>(0, 0);
+    double base_line2 = 1.0 / Q.at<double>(3, 2);
+    cout << base_line << endl;
+    cout << base_line2 << endl;
+    cout << t << endl;
+
 
     Mat lmapx, lmapy, rmapx, rmapy;
     Mat img_lu, img_ru;

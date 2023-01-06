@@ -10,8 +10,8 @@ include_directories(${OpenCV_INCLUDE_DIRS} ${PCL_INCLUDE_DIRS})
 # target_link_libraries(monocular1 ${OpenCV_LIBS})
 # add_executable(monocular2 camera/monocular2.cpp)
 # target_link_libraries(monocular2 ${OpenCV_LIBS})
-# add_executable(stereo camera/stereo.cpp)
-# target_link_libraries(stereo ${OpenCV_LIBS} ${PCL_LIBRARIES})
+add_executable(stereo camera/stereo.cpp)
+target_link_libraries(stereo ${OpenCV_LIBS} ${PCL_LIBRARIES})
 
 # cam_lidar calibration
 add_executable(calibration cam_lidar/calibration.cpp)
